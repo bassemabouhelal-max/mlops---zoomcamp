@@ -1,0 +1,674 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "0423269c-ba59-488c-bf11-9eda1f3432c8",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ModuleNotFoundError",
+     "evalue": "No module named 'pandas'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mModuleNotFoundError\u001b[39m                       Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[1]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m pandas \u001b[38;5;28;01mas\u001b[39;00m pd\n",
+      "\u001b[31mModuleNotFoundError\u001b[39m: No module named 'pandas'"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "f6df1038-6211-453e-919a-8d6c2b58d465",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "252.17s - pydevd: Sending message related to process being replaced timed-out after 5 seconds\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Collecting pandas\n",
+      "  Downloading pandas-3.0.6-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)\n",
+      "Collecting numpy>=2.3.3 (from pandas)\n",
+      "  Downloading numpy-2.5.4-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)\n",
+      "Requirement already satisfied: python-dateutil>=2.8.2 in /home/codespace/.local/lib/python3.14/site-packages (from pandas) (2.9.0.post0)\n",
+      "Requirement already satisfied: six>=1.5 in /home/codespace/.local/lib/python3.14/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)\n",
+      "Downloading pandas-3.0.6-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.8 MB)\n",
+      "\u001b[2K   \u001b[38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m10.8/10.8 MB\u001b[0m \u001b[31m57.2 MB/s\u001b[0m  \u001b[33m0:00:00\u001b[0m\n",
+      "\u001b[?25hDownloading numpy-2.5.4-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)\n",
+      "\u001b[2K   \u001b[38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m16.7/16.7 MB\u001b[0m \u001b[31m59.0 MB/s\u001b[0m  \u001b[33m0:00:00\u001b[0ms\u001b[0m eta \u001b[36m0:00:01\u001b[0m\n",
+      "\u001b[?25hInstalling collected packages: numpy, pandas\n",
+      "\u001b[2K   \u001b[38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m2/2\u001b[0m [pandas]━━━━\u001b[0m \u001b[32m1/2\u001b[0m [pandas]\n",
+      "\u001b[1A\u001b[2KSuccessfully installed numpy-2.5.4 pandas-3.0.6\n",
+      "Note: you may need to restart the kernel to use updated packages.\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install pandas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "7dba8294-6323-41ca-92b0-260ec4d9dd4a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "f34a623c-e6e9-45d1-aa74-d75b9ad754d3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "<module 'pandas' from '/usr/local/python/3.14.2/lib/python3.14/site-packages/pandas/__init__.py'>"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "9a42eaaa-d0ae-4c86-89e2-a7af5ce9a1ab",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'3.0.6'"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "pd.__version__"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "abd16166-d2ea-48a6-9c93-31875ef8a6db",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'df' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[3]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m df.head()\n",
+      "\u001b[31mNameError\u001b[39m: name 'df' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "a19e5762-fb6f-479d-b0ac-cdc69550d5a5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Collecting pyarrow\n",
+      "  Downloading pyarrow-26.0.0-cp314-cp314-manylinux_2_28_x86_64.whl.metadata (3.0 kB)\n",
+      "Downloading pyarrow-26.0.0-cp314-cp314-manylinux_2_28_x86_64.whl (54.0 MB)\n",
+      "\u001b[2K   \u001b[38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m54.0/54.0 MB\u001b[0m \u001b[31m60.7 MB/s\u001b[0m  \u001b[33m0:00:00\u001b[0ms\u001b[0m eta \u001b[36m0:00:01\u001b[0m\n",
+      "\u001b[?25hInstalling collected packages: pyarrow\n",
+      "Successfully installed pyarrow-26.0.0\n",
+      "Note: you may need to restart the kernel to use updated packages.\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install pyarrow"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "5366f7e7-a45b-41b9-ad8e-251f2c384146",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'df' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[1]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m df.head()\n",
+      "\u001b[31mNameError\u001b[39m: name 'df' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "377f663f-c569-4331-b3b9-c9a376eb8254",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'df' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[4]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m df.head()\n",
+      "\u001b[31mNameError\u001b[39m: name 'df' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "eea2a908-8369-46d2-b75c-5c0b9e517d63",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'pd' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[5]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m df = pd.read_parquet(\u001b[33m'yellow_tripdata_2024-01.parquet'\u001b[39m)\n",
+      "\u001b[31mNameError\u001b[39m: name 'pd' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "df = pd.read_parquet('yellow_tripdata_2024-01.parquet')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "35053704-a7b6-4f51-9291-6e925ee68d4d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "45c7494a-6a1e-4cd2-a9c5-829c5e5f2e60",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "FileNotFoundError",
+     "evalue": "[Errno 2] No such file or directory: 'yellow_tripdata_2024-01.parquet'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mFileNotFoundError\u001b[39m                         Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[10]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m df = pd.read_parquet(\u001b[33m'yellow_tripdata_2024-01.parquet'\u001b[39m)\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m/usr/local/python/3.14.2/lib/python3.14/site-packages/pandas/io/parquet.py:671\u001b[39m, in \u001b[36mread_parquet\u001b[39m\u001b[34m(path, engine, columns, storage_options, dtype_backend, filesystem, filters, to_pandas_kwargs, **kwargs)\u001b[39m\n\u001b[32m    668\u001b[39m impl = get_engine(engine)\n\u001b[32m    669\u001b[39m check_dtype_backend(dtype_backend)\n\u001b[32m--> \u001b[39m\u001b[32m671\u001b[39m \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[30;43mimpl\u001b[39;49m\u001b[30;43m.\u001b[39;49m\u001b[30;43mread\u001b[39;49m\u001b[30;43m(\u001b[39;49m\n\u001b[32m    672\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43mpath\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    673\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43mcolumns\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43mcolumns\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    674\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43mfilters\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43mfilters\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    675\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43mstorage_options\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43mstorage_options\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    676\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43mdtype_backend\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43mdtype_backend\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    677\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43mfilesystem\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43mfilesystem\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    678\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43mto_pandas_kwargs\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43mto_pandas_kwargs\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    679\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43m*\u001b[39;49m\u001b[30;43m*\u001b[39;49m\u001b[30;43mkwargs\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    680\u001b[39m \u001b[30;43m\u001b[39;49m\u001b[30;43m)\u001b[39;49m\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m/usr/local/python/3.14.2/lib/python3.14/site-packages/pandas/io/parquet.py:253\u001b[39m, in \u001b[36mPyArrowImpl.read\u001b[39m\u001b[34m(self, path, columns, filters, dtype_backend, storage_options, filesystem, to_pandas_kwargs, **kwargs)\u001b[39m\n\u001b[32m    240\u001b[39m \u001b[38;5;28;01mdef\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[34mread\u001b[39m(\n\u001b[32m    241\u001b[39m     \u001b[38;5;28mself\u001b[39m,\n\u001b[32m    242\u001b[39m     path,\n\u001b[32m   (...)\u001b[39m\u001b[32m    249\u001b[39m     **kwargs,\n\u001b[32m    250\u001b[39m ) -> DataFrame:\n\u001b[32m    251\u001b[39m     kwargs[\u001b[33m\"\u001b[39m\u001b[33muse_pandas_metadata\u001b[39m\u001b[33m\"\u001b[39m] = \u001b[38;5;28;01mTrue\u001b[39;00m\n\u001b[32m--> \u001b[39m\u001b[32m253\u001b[39m     path_or_handle, handles, filesystem = \u001b[30;43m_get_path_or_handle\u001b[39;49m\u001b[30;43m(\u001b[39;49m\n\u001b[32m    254\u001b[39m \u001b[30;43m        \u001b[39;49m\u001b[30;43mpath\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    255\u001b[39m \u001b[30;43m        \u001b[39;49m\u001b[30;43mfilesystem\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    256\u001b[39m \u001b[30;43m        \u001b[39;49m\u001b[30;43mstorage_options\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43mstorage_options\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    257\u001b[39m \u001b[30;43m        \u001b[39;49m\u001b[30;43mmode\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43m\"\u001b[39;49m\u001b[30;43mrb\u001b[39;49m\u001b[30;43m\"\u001b[39;49m\u001b[30;43m,\u001b[39;49m\n\u001b[32m    258\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43m)\u001b[39;49m\n\u001b[32m    259\u001b[39m     \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[32m    260\u001b[39m         pa_table = \u001b[38;5;28mself\u001b[39m.api.parquet.read_table(\n\u001b[32m    261\u001b[39m             path_or_handle,\n\u001b[32m    262\u001b[39m             columns=columns,\n\u001b[32m   (...)\u001b[39m\u001b[32m    265\u001b[39m             **kwargs,\n\u001b[32m    266\u001b[39m         )\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m/usr/local/python/3.14.2/lib/python3.14/site-packages/pandas/io/parquet.py:141\u001b[39m, in \u001b[36m_get_path_or_handle\u001b[39m\u001b[34m(path, fs, storage_options, mode, is_dir)\u001b[39m\n\u001b[32m    131\u001b[39m handles = \u001b[38;5;28;01mNone\u001b[39;00m\n\u001b[32m    132\u001b[39m \u001b[38;5;28;01mif\u001b[39;00m (\n\u001b[32m    133\u001b[39m     \u001b[38;5;129;01mnot\u001b[39;00m fs\n\u001b[32m    134\u001b[39m     \u001b[38;5;129;01mand\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m is_dir\n\u001b[32m   (...)\u001b[39m\u001b[32m    139\u001b[39m     \u001b[38;5;66;03m# fsspec resources can also point to directories\u001b[39;00m\n\u001b[32m    140\u001b[39m     \u001b[38;5;66;03m# this branch is used for example when reading from non-fsspec URLs\u001b[39;00m\n\u001b[32m--> \u001b[39m\u001b[32m141\u001b[39m     handles = \u001b[30;43mget_handle\u001b[39;49m\u001b[30;43m(\u001b[39;49m\n\u001b[32m    142\u001b[39m \u001b[30;43m        \u001b[39;49m\u001b[30;43mpath_or_handle\u001b[39;49m\u001b[30;43m,\u001b[39;49m\u001b[30;43m \u001b[39;49m\u001b[30;43mmode\u001b[39;49m\u001b[30;43m,\u001b[39;49m\u001b[30;43m \u001b[39;49m\u001b[30;43mis_text\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43;01mFalse\u001b[39;49;00m\u001b[30;43m,\u001b[39;49m\u001b[30;43m \u001b[39;49m\u001b[30;43mstorage_options\u001b[39;49m\u001b[30;43m=\u001b[39;49m\u001b[30;43mstorage_options\u001b[39;49m\n\u001b[32m    143\u001b[39m \u001b[30;43m    \u001b[39;49m\u001b[30;43m)\u001b[39;49m\n\u001b[32m    144\u001b[39m     fs = \u001b[38;5;28;01mNone\u001b[39;00m\n\u001b[32m    145\u001b[39m     path_or_handle = handles.handle\n",
+      "\u001b[36mFile \u001b[39m\u001b[32m/usr/local/python/3.14.2/lib/python3.14/site-packages/pandas/io/common.py:939\u001b[39m, in \u001b[36mget_handle\u001b[39m\u001b[34m(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)\u001b[39m\n\u001b[32m    930\u001b[39m         handle = \u001b[38;5;28mopen\u001b[39m(\n\u001b[32m    931\u001b[39m             handle,\n\u001b[32m    932\u001b[39m             ioargs.mode,\n\u001b[32m   (...)\u001b[39m\u001b[32m    935\u001b[39m             newline=\u001b[33m\"\u001b[39m\u001b[33m\"\u001b[39m,\n\u001b[32m    936\u001b[39m         )\n\u001b[32m    937\u001b[39m     \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[32m    938\u001b[39m         \u001b[38;5;66;03m# Binary mode\u001b[39;00m\n\u001b[32m--> \u001b[39m\u001b[32m939\u001b[39m         handle = \u001b[30;43mopen\u001b[39;49m\u001b[30;43m(\u001b[39;49m\u001b[30;43mhandle\u001b[39;49m\u001b[30;43m,\u001b[39;49m\u001b[30;43m \u001b[39;49m\u001b[30;43mioargs\u001b[39;49m\u001b[30;43m.\u001b[39;49m\u001b[30;43mmode\u001b[39;49m\u001b[30;43m)\u001b[39;49m\n\u001b[32m    940\u001b[39m     handles.append(handle)\n\u001b[32m    942\u001b[39m \u001b[38;5;66;03m# Convert BytesIO or file objects passed with an encoding\u001b[39;00m\n",
+      "\u001b[31mFileNotFoundError\u001b[39m: [Errno 2] No such file or directory: 'yellow_tripdata_2024-01.parquet'"
+     ]
+    }
+   ],
+   "source": [
+    "df = pd.read_parquet('yellow_tripdata_2024-01.parquet')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "32e0403e-3336-4dcd-a502-aab158f524e0",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'df' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mNameError\u001b[39m                                 Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[8]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m df.head()\n",
+      "\u001b[31mNameError\u001b[39m: name 'df' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "17dd2b96-76aa-4102-9ef4-d95f3a4bdb44",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "7813a5cd-94cd-4c18-bfa0-b5e117825c76",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.read_parquet('yellow_tripdata_2024-01.parquet')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "ab0fbca9-cb75-4b4f-94fc-cb9a9edf40b9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>VendorID</th>\n",
+       "      <th>tpep_pickup_datetime</th>\n",
+       "      <th>tpep_dropoff_datetime</th>\n",
+       "      <th>passenger_count</th>\n",
+       "      <th>trip_distance</th>\n",
+       "      <th>RatecodeID</th>\n",
+       "      <th>store_and_fwd_flag</th>\n",
+       "      <th>PULocationID</th>\n",
+       "      <th>DOLocationID</th>\n",
+       "      <th>payment_type</th>\n",
+       "      <th>fare_amount</th>\n",
+       "      <th>extra</th>\n",
+       "      <th>mta_tax</th>\n",
+       "      <th>tip_amount</th>\n",
+       "      <th>tolls_amount</th>\n",
+       "      <th>improvement_surcharge</th>\n",
+       "      <th>total_amount</th>\n",
+       "      <th>congestion_surcharge</th>\n",
+       "      <th>Airport_fee</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>2</td>\n",
+       "      <td>2024-01-01 00:57:55</td>\n",
+       "      <td>2024-01-01 01:17:43</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>1.72</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>N</td>\n",
+       "      <td>186</td>\n",
+       "      <td>79</td>\n",
+       "      <td>2</td>\n",
+       "      <td>17.7</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.5</td>\n",
+       "      <td>0.00</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>22.70</td>\n",
+       "      <td>2.5</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>2024-01-01 00:03:00</td>\n",
+       "      <td>2024-01-01 00:09:36</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>1.80</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>N</td>\n",
+       "      <td>140</td>\n",
+       "      <td>236</td>\n",
+       "      <td>1</td>\n",
+       "      <td>10.0</td>\n",
+       "      <td>3.5</td>\n",
+       "      <td>0.5</td>\n",
+       "      <td>3.75</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>18.75</td>\n",
+       "      <td>2.5</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>1</td>\n",
+       "      <td>2024-01-01 00:17:06</td>\n",
+       "      <td>2024-01-01 00:35:01</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>4.70</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>N</td>\n",
+       "      <td>236</td>\n",
+       "      <td>79</td>\n",
+       "      <td>1</td>\n",
+       "      <td>23.3</td>\n",
+       "      <td>3.5</td>\n",
+       "      <td>0.5</td>\n",
+       "      <td>3.00</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>31.30</td>\n",
+       "      <td>2.5</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>1</td>\n",
+       "      <td>2024-01-01 00:36:38</td>\n",
+       "      <td>2024-01-01 00:44:56</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>1.40</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>N</td>\n",
+       "      <td>79</td>\n",
+       "      <td>211</td>\n",
+       "      <td>1</td>\n",
+       "      <td>10.0</td>\n",
+       "      <td>3.5</td>\n",
+       "      <td>0.5</td>\n",
+       "      <td>2.00</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>17.00</td>\n",
+       "      <td>2.5</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>1</td>\n",
+       "      <td>2024-01-01 00:46:51</td>\n",
+       "      <td>2024-01-01 00:52:57</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.80</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>N</td>\n",
+       "      <td>211</td>\n",
+       "      <td>148</td>\n",
+       "      <td>1</td>\n",
+       "      <td>7.9</td>\n",
+       "      <td>3.5</td>\n",
+       "      <td>0.5</td>\n",
+       "      <td>3.20</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>16.10</td>\n",
+       "      <td>2.5</td>\n",
+       "      <td>0.0</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   VendorID tpep_pickup_datetime tpep_dropoff_datetime  passenger_count  \\\n",
+       "0         2  2024-01-01 00:57:55   2024-01-01 01:17:43              1.0   \n",
+       "1         1  2024-01-01 00:03:00   2024-01-01 00:09:36              1.0   \n",
+       "2         1  2024-01-01 00:17:06   2024-01-01 00:35:01              1.0   \n",
+       "3         1  2024-01-01 00:36:38   2024-01-01 00:44:56              1.0   \n",
+       "4         1  2024-01-01 00:46:51   2024-01-01 00:52:57              1.0   \n",
+       "\n",
+       "   trip_distance  RatecodeID store_and_fwd_flag  PULocationID  DOLocationID  \\\n",
+       "0           1.72         1.0                  N           186            79   \n",
+       "1           1.80         1.0                  N           140           236   \n",
+       "2           4.70         1.0                  N           236            79   \n",
+       "3           1.40         1.0                  N            79           211   \n",
+       "4           0.80         1.0                  N           211           148   \n",
+       "\n",
+       "   payment_type  fare_amount  extra  mta_tax  tip_amount  tolls_amount  \\\n",
+       "0             2         17.7    1.0      0.5        0.00           0.0   \n",
+       "1             1         10.0    3.5      0.5        3.75           0.0   \n",
+       "2             1         23.3    3.5      0.5        3.00           0.0   \n",
+       "3             1         10.0    3.5      0.5        2.00           0.0   \n",
+       "4             1          7.9    3.5      0.5        3.20           0.0   \n",
+       "\n",
+       "   improvement_surcharge  total_amount  congestion_surcharge  Airport_fee  \n",
+       "0                    1.0         22.70                   2.5          0.0  \n",
+       "1                    1.0         18.75                   2.5          0.0  \n",
+       "2                    1.0         31.30                   2.5          0.0  \n",
+       "3                    1.0         17.00                   2.5          0.0  \n",
+       "4                    1.0         16.10                   2.5          0.0  "
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "e243b0ea-7847-419e-bb31-33e32586225e",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ModuleNotFoundError",
+     "evalue": "No module named 'sklearn'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mModuleNotFoundError\u001b[39m                       Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[14]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m sklearn\n",
+      "\u001b[31mModuleNotFoundError\u001b[39m: No module named 'sklearn'"
+     ]
+    }
+   ],
+   "source": [
+    "import sklearn"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "b59fdc76-2858-4d60-a2cd-05d6da0fc211",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ModuleNotFoundError",
+     "evalue": "No module named 'sklearn'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mModuleNotFoundError\u001b[39m                       Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[15]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m \u001b[38;5;28;01mimport\u001b[39;00m sklearn\n",
+      "\u001b[31mModuleNotFoundError\u001b[39m: No module named 'sklearn'"
+     ]
+    }
+   ],
+   "source": [
+    "import sklearn"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "82916ea7-72a5-4540-ae4a-c7f2c92492a0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Collecting scikit-learn\n",
+      "  Downloading scikit_learn-1.9.1-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)\n",
+      "Requirement already satisfied: numpy>=1.24.1 in /usr/local/python/3.14.2/lib/python3.14/site-packages (from scikit-learn) (2.5.4)\n",
+      "Collecting scipy>=1.10.0 (from scikit-learn)\n",
+      "  Downloading scipy-1.18.1-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)\n",
+      "Collecting joblib>=1.4.0 (from scikit-learn)\n",
+      "  Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)\n",
+      "Collecting narwhals>=2.0.1 (from scikit-learn)\n",
+      "  Downloading narwhals-2.27.1-py3-none-any.whl.metadata (15 kB)\n",
+      "Collecting threadpoolctl>=3.5.0 (from scikit-learn)\n",
+      "  Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)\n",
+      "Collecting cloudpickle>=3.0 (from joblib>=1.4.0->scikit-learn)\n",
+      "  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)\n",
+      "Downloading scikit_learn-1.9.1-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.2 MB)\n",
+      "\u001b[2K   \u001b[38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m9.2/9.2 MB\u001b[0m \u001b[31m39.2 MB/s\u001b[0m  \u001b[33m0:00:00\u001b[0m \u001b[31m100.0 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\n",
+      "\u001b[?25hDownloading joblib-1.6.0-py3-none-any.whl (306 kB)\n",
+      "Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)\n",
+      "Downloading narwhals-2.27.1-py3-none-any.whl (483 kB)\n",
+      "Downloading scipy-1.18.1-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)\n",
+      "\u001b[2K   \u001b[38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m35.3/35.3 MB\u001b[0m \u001b[31m63.0 MB/s\u001b[0m  \u001b[33m0:00:00\u001b[0ms\u001b[0m eta \u001b[36m0:00:01\u001b[0m\n",
+      "\u001b[?25hDownloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)\n",
+      "Installing collected packages: threadpoolctl, scipy, narwhals, cloudpickle, joblib, scikit-learn\n",
+      "\u001b[2K   \u001b[38;2;114;156;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m \u001b[32m6/6\u001b[0m [scikit-learn]0m \u001b[32m5/6\u001b[0m [scikit-learn]]\n",
+      "\u001b[1A\u001b[2KSuccessfully installed cloudpickle-3.1.2 joblib-1.6.0 narwhals-2.27.1 scikit-learn-1.9.1 scipy-1.18.1 threadpoolctl-3.7.0\n",
+      "Note: you may need to restart the kernel to use updated packages.\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install scikit-learn"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "cf79c794-2e3d-4da4-b683-de662d84f93b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "621cd5f5-7505-4bb0-ad5e-a1df67222e8a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df = pd.read_parquet('yellow_tripdata_2024-01.parquet')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "fb37b224-e066-4d9d-97bc-429daa89ee0f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import sklearn"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "ff712afe-b452-4403-adb9-bbc1df885cbd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'1.9.1'"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sklearn.__version__"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "59b250bb-261b-47d7-a35b-67ad2d3e490e",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
